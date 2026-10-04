@@ -83,8 +83,9 @@ function startObserver() {
     });
 }
 
-if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", startObserver);
-} else {
-    startObserver();
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", startObserver);
+    } else {
+        startObserver();
+    }
 }
