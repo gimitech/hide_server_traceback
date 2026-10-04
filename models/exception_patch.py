@@ -1,12 +1,12 @@
 import logging
 
-from odoo.http import (
+from flectra.http import (
     JsonRPCDispatcher,
     serialize_exception,
     NotFound,
     SessionExpiredException,
 )
-from odoo.exceptions import (
+from flectra.exceptions import (
     ValidationError,
     UserError,
     AccessError,
@@ -36,7 +36,7 @@ def custom_handle_error(self, exc):
 
     Business Exceptions
     -------------------
-    Preserve Odoo behaviour.
+    Preserve F309 behaviour.
 
     Unexpected Exceptions
     ---------------------
@@ -54,7 +54,7 @@ def custom_handle_error(self, exc):
     # Build default Odoo error response
     error = {
         "code": 200,
-        "message": "Odoo Server Error",
+        "message": "F309 Server Error",
         "data": serialize_exception(exc),
     }
 
@@ -65,7 +65,7 @@ def custom_handle_error(self, exc):
 
     elif isinstance(exc, SessionExpiredException):
         error["code"] = 100
-        error["message"] = "Odoo Session Expired"
+        error["message"] = "F309 Session Expired"
 
     data = error.get("data") or {}
 
