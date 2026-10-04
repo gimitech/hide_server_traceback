@@ -1,9 +1,13 @@
-/** @odoo-module **/
+flectra.define('hide_server_traceback.error_dialog_patch', function (require) {
+    "use strict";
 
-const CUSTOM_MESSAGE =
-    "Something went wrong. Please contact your administrator.";
+    const CrashManager = require('web.CrashManager');
+    const Dialog = require('web.Dialog');
 
-const observer = new MutationObserver(() => {
+    const CUSTOM_MESSAGE =
+        "Something went wrong. Please contact your administrator.";
+
+    const observer = new MutationObserver(() => {
 
     document.querySelectorAll(".o_error_dialog").forEach((dialog) => {
 
