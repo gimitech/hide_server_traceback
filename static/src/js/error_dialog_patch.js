@@ -30,7 +30,7 @@ const observer = new MutationObserver(() => {
         const title = dialog.querySelector(".modal-title");
 
         if (title) {
-            title.textContent = "Odoo Server Error";
+            title.textContent = "F309 Server Error";
         }
 
         // ----------------------------
