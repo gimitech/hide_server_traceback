@@ -13,7 +13,7 @@ Key Features:
 * Display professional error messages
 * Improve user experience
 * Lightweight and upgrade-safe
-* Odoo 18 compatible
+* Flectra compatible
   """,
     "author": "Deepak Verma",
     "maintainer": "Deepak Verma",
@@ -22,7 +22,7 @@ Key Features:
     "support": "[dpakverma789@gmail.com](mailto:dpakverma789@gmail.com)",
     "license": "LGPL-3",
     "category": "Administration",
-    "version": "18.0.1.0.0",
+    "version": "3.0.1.0.0",
 
     "depends": [
         "web",
