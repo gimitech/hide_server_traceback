@@ -38,9 +38,7 @@ Key Features:
     "images": [
         "static/description/banner.png",
     ],
-    'data': [
-        'views/assets.xml',
-    ],
+    
     "installable": True,
     "application": False,
     "auto_install": False,
